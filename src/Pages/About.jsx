@@ -334,7 +334,7 @@ const About = () => {
 
   Recently, I have learned various forms of JavaScript and fallen in love with TypeScript. TypeScript addresses JavaScript’s shortcomings while allowing me to write safer and more readable code. For me, working with TypeScript is like a digital tango – every piece of code and design setting perfecting my projects and making them as functional as a Swiss army knife.
 
-  Guess what? I’ve been part of the Void Development team for almost five years – that’s a lifetime in web years! From battling quirky bugs to celebrating pixel-perfect layouts, I’ve become more attached to my keyboard than to my morning coffee.
+  Guess what? I’ve been part of the Atlas Dev team for almost five years – that’s a lifetime in web years! From battling quirky bugs to celebrating pixel-perfect layouts, I’ve become more attached to my keyboard than to my morning coffee.
 
   So, buckle up, because I’m on a mission to sprinkle some magic on the web with every quirky and captivating application.
 
