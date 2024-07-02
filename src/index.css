@@ -1,0 +1,15 @@
+
+.c-scrollbar {
+  position: fixed;
+  right: 2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.c-scrollbar_thumb {
+  background: #7c3aed;
+  width: 4px;
+}
