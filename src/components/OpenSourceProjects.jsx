@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const ProjectsContainer = styled.div`
   background-color: #070608;
@@ -47,7 +49,7 @@ const ProjectCard = styled.a`
   }
 
   &::before {
-    top: -10px; /* تغيير المسافة لجعل الزخرفة خارج البطاقة */
+    top: -10px;
     left: -10px;
     width: calc(100% + 30px);
     height: calc(100% + 30px);
@@ -78,11 +80,6 @@ const ProjectTitle = styled.h3`
   margin-bottom: 0.5rem;
 `;
 
-const ProjectDescription = styled.p`
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-`;
-
 const TechStack = styled.p`
   font-size: 0.875rem;
   color: #b39ddb;
@@ -108,31 +105,31 @@ const ViewProjectsButton = styled.a`
 const projects = [
   {
     title: 'Shoping Website',
-    description: 'Welcome to the Shoping Website! This is a Shoping website created by iiShadow11 using PHP, HTML, CSS, and Bootstrap. The website showcases Products and info about it',
+    description: `Welcome to the Shoping Website! This is a Shoping website created by iiShadow11 using PHP, HTML, CSS, and Bootstrap. The website showcases Products and info about it`,
     link: 'https://github.com/SrWitty/Shop-Website',
     techStack: 'PHP',
   },
   {
     title: 'Twitter-Clone',
-    description: 'Twitter Clone is a social media platform designed by iiShadow, offering a range of features that mimic the popular microblogging and social networking platform, Twitter. This clone is an excellent way to experience the functionalities of Twitter while adding some unique elements.',
+    description: `Twitter Clone is a social media platform designed by iiShadow, offering a range of features that mimic the popular microblogging and social networking platform, Twitter. This clone is an excellent way to experience the functionalities of Twitter while adding some unique elements.`,
     link: 'https://github.com/SrWitty/Twitter-Clone',
     techStack: 'PHP',
   },
   {
     title: 'Logic-Bot',
-    description: 'Logic Bot It is Muilt Discord Bot & Open Src Code Make Your Server Professional !',
+    description: `Logic Bot It is Muilt Discord Bot & Open Src Code Make Your Server Professional !`,
     link: 'https://github.com/SrWitty/Logic-Bot ',
     techStack: 'JavaScript',
   },
   {
     title: 'Discord V14 Handler',
-    description: 'This is a slash command package I built when I was bored. It includes slash commands and optional prefix commands.',
+    description: `This is a slash command package I built when I was bored. It includes slash commands and optional prefix commands.`,
     link: 'https://github.com/SrWitty/Discord-V14-Handler-slash-prefix',
     techStack: 'JavaScript',
   },
   {
     title: 'Emi Bot',
-    description: 'Emi Bot Is Bot A Discord multi-purpose Bot ,One of the best bots that supports , Moderation, games and Community commands to make it easier for you to control the server and help in server',
+    description: `Emi Bot Is Bot A Discord multi-purpose Bot ,One of the best bots that supports , Moderation, games and Community commands to make it easier for you to control the server and help in server`,
     link: 'https://github.com/SrWitty/Emi-Bot',
     techStack: 'JavaScript',
   },
@@ -167,7 +164,9 @@ const OpenSourceProjects = () => {
             ref={(el) => (cardRefs.current[index] = el)}
           >
             <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {project.description}
+            </ReactMarkdown>
             <TechStack>{project.techStack}</TechStack>
           </ProjectCard>
         ))}

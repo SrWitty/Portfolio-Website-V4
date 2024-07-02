@@ -30,7 +30,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true, // Needed for resolve-url-loader to work
+              sourceMap: true, 
             },
           },
         ],

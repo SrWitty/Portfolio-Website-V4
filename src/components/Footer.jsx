@@ -5,20 +5,31 @@ import { faGithub, faDiscord, faTwitter } from '@fortawesome/free-brands-svg-ico
 
 const FooterContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: #070608; // New dark background
   color: #ffffff; // White text
   font-size: 0.9rem;
   border-radius: 10px; // Add border-radius
-  span {
-    color: #7c3aed;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
   }
 `;
 
 const LeftText = styled.div`
   font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    text-align: left;
+  }
 `;
 
 const SocialIcons = styled.div`

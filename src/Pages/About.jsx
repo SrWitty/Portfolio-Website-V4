@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { useTransition, animated } from 'react-spring';
 import profileImage from '../assets/images/profile.jpg';
+import ReactMarkdown from 'react-markdown';
 
 const technologies = {
   Languages: [
@@ -44,8 +45,12 @@ const AboutContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 4rem;
-  background-color: #070608;
+  background-color: #070608;  
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    padding: 6rem;
+  }
 `;
 
 const TopContainer = styled.div`
@@ -54,6 +59,10 @@ const TopContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -61,6 +70,11 @@ const ImageContainer = styled.div`
   margin-right: 2rem;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -69,6 +83,10 @@ const ProfileImage = styled.img`
   border-radius: 10px;
   position: relative;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    width: 240px;
+  }
 `;
 
 const ImageBackground = styled.div`
@@ -80,10 +98,19 @@ const ImageBackground = styled.div`
   left: 20px;
   z-index: 1;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 240px;
+    height: 360px;
+  }
 `;
 
 const InfoContainer = styled.div`
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h2`
@@ -93,6 +120,11 @@ const Title = styled.h2`
   color: #ffffff;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const EmojiContainer = styled.div`
@@ -101,9 +133,13 @@ const EmojiContainer = styled.div`
   border-radius: 50%;
   display: inline-block;
   margin-right: 0.5rem;
+
+  @media (max-width: 768px) {
+    margin-right: 0.3rem;
+  }
 `;
 
-const Description = styled.p`
+const Description = styled(ReactMarkdown)`
   font-size: 1rem;
   line-height: 1.5;
   color: #ffffff;
@@ -113,6 +149,7 @@ const SocialButtons = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: center;
 `;
 
 const SocialButton = styled.a`
@@ -143,6 +180,19 @@ const StatsContainer = styled.div`
   width: 100%;
   margin-top: 2rem;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+`;
+
+const StatCardWrapper = styled.div`
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 `;
 
 const StatCard = styled.div`
@@ -154,6 +204,10 @@ const StatCard = styled.div`
   width: 200px;
   height: 100px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StatDecoration = styled.div`
@@ -165,6 +219,10 @@ const StatDecoration = styled.div`
   left: 20px;
   z-index: 1;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StatNumber = styled.h3`
@@ -174,7 +232,7 @@ const StatNumber = styled.h3`
 `;
 
 const StatText = styled.p`
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #888888;
   margin: 0;
 `;
@@ -182,6 +240,11 @@ const StatText = styled.p`
 const TechnologiesContainer = styled.div`
   margin-top: 4rem;
   text-align: center;
+
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 const Tabs = styled.div`
@@ -199,6 +262,7 @@ const Tab = styled.button`
   padding: 0.5rem;
   cursor: pointer;
   position: relative;
+
   &:after {
     content: '';
     display: ${(props) => (props.active ? 'block' : 'none')};
@@ -209,6 +273,11 @@ const Tab = styled.button`
     height: 2px;
     background: #7c3aed;
   }
+
+  @media (max-width: 768px) {
+    font-size: .7rem;
+    margin: 0 0.5rem;
+  }
 `;
 
 const Content = styled.div`
@@ -216,12 +285,17 @@ const Content = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 const Technology = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1rem;
 `;
 
 const TechnologyIcon = styled.img`
@@ -234,10 +308,13 @@ const TechnologyName = styled.div`
   font-size: 1rem;
 `;
 
-
 const AnimatedHeading = styled.h2`
   font-size: 3rem;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const About = () => {
@@ -249,6 +326,20 @@ const About = () => {
     enter: { opacity: 1, transform: 'translate3d(0,0px,0)' },
     leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' },
   });
+
+  const markdownDescription = `
+  Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
+
+  I live in Egypt and have been active in the world of web development since 2020. I started with HTML and CSS, then moved on to PHP, and gradually transitioned to JavaScript. Currently, I use JavaScript and TypeScript to create web applications and services.
+
+  Recently, I have learned various forms of JavaScript and fallen in love with TypeScript. TypeScript addresses JavaScript’s shortcomings while allowing me to write safer and more readable code. For me, working with TypeScript is like a digital tango – every piece of code and design setting perfecting my projects and making them as functional as a Swiss army knife.
+
+  Guess what? I’ve been part of the Void Development team for almost five years – that’s a lifetime in web years! From battling quirky bugs to celebrating pixel-perfect layouts, I’ve become more attached to my keyboard than to my morning coffee.
+
+  So, buckle up, because I’m on a mission to sprinkle some magic on the web with every quirky and captivating application.
+
+  — Sir.Witty
+  `;
 
   return (
     <AboutContainer>
@@ -262,20 +353,7 @@ const About = () => {
             <EmojiContainer><span role="img" aria-label="wave">👋</span></EmojiContainer>
             About Me
           </Title>
-          <Description>
-  Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
-  <br /><br />
-  I live in Egypt and have been active in the world of web development since 2020. I started with HTML and CSS, then moved on to PHP, and gradually transitioned to JavaScript. Currently, I use JavaScript and TypeScript to create web applications and services.
-  <br /><br />
-  Recently, I have learned various forms of JavaScript and fallen in love with TypeScript. TypeScript addresses JavaScript’s shortcomings while allowing me to write safer and more readable code. For me, working with TypeScript is like a digital tango – every piece of code and design setting perfecting my projects and making them as functional as a Swiss army knife.
-  <br /><br />
-  Guess what? I’ve been part of the Void Development team for almost five years – that’s a lifetime in web years! From battling quirky bugs to celebrating pixel-perfect layouts, I’ve become more attached to my keyboard than to my morning coffee.
-  <br /><br />
-  So, buckle up, because I’m on a mission to sprinkle some magic on the web with every quirky and captivating application.
-  <br /><br />
-  — Sir.Witty
-</Description>
-
+          <Description>{markdownDescription}</Description>
           <SocialButtons>
             <SocialButton href="https://github.com/SrWitty" target="_blank"><FontAwesomeIcon icon={faGithub} />GitHub</SocialButton>
             <SocialButton href="https://discord.com/users/1091118468155314306" target="_blank"><FontAwesomeIcon icon={faDiscord} />Discord</SocialButton>
@@ -284,27 +362,27 @@ const About = () => {
         </InfoContainer>
       </TopContainer>
       <StatsContainer>
-        <div style={{ position: 'relative' }}>
+        <StatCardWrapper>
           <StatDecoration />
           <StatCard>
             <StatNumber>4 Years</StatNumber>
             <StatText>Experience</StatText>
           </StatCard>
-        </div>
-        <div style={{ position: 'relative' }}>
+        </StatCardWrapper>
+        <StatCardWrapper>
           <StatDecoration />
           <StatCard>
             <StatNumber>10+</StatNumber>
             <StatText>Completed Projects</StatText>
           </StatCard>
-        </div>
-        <div style={{ position: 'relative' }}>
+        </StatCardWrapper>
+        <StatCardWrapper>
           <StatDecoration />
           <StatCard>
             <StatNumber>20+</StatNumber>
             <StatText>Clients</StatText>
           </StatCard>
-        </div>
+        </StatCardWrapper>
       </StatsContainer>
       <TechnologiesContainer>
         <AnimatedHeading>Technologies I Use</AnimatedHeading>

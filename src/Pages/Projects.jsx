@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import image1 from '../assets/images/spark.png';
 import image2 from '../assets/images/portoflio1.png';
 import image3 from '../assets/images/discordbotweb.png';
@@ -88,25 +89,25 @@ const Arrow = styled.div`
 const projects = [
   {
     title: 'Spark Creative',
-    description: 'The Spark Creative is a platform designed to showcase the works and services offered by a creative team. It provides information about the team members, their expertise, recent projects, and a blog section to share insights and updates.',
+    description: `The Spark Creative is a platform designed to showcase the works and services offered by a creative team. It provides information about the team members, their expertise, recent projects, and a blog section to share insights and updates.`,
     link: 'https://github.com/SrWitty/spark-creative',
     image: image1,
   },
   {
     title: 'PortfolioV2',
-    description: 'personal portfolio website! This project is an upgraded version of the original personal portfolio, now built using React.js. This second version includes several new features, updates to the design, additional pages, and refined color schemes.',
+    description: `personal portfolio website! This project is an upgraded version of the original personal portfolio, now built using React.js. This second version includes several new features, updates to the design, additional pages, and refined color schemes.`,
     link: 'https://github.com/SrWitty/MyPortfolio',
     image: image2,
   },
   {
     title: 'Discord Bot Website',
-    description: 'Welcome to the official website repository for our Discord bot. This website serves as a hub of information, updates, and support for our Discord community.',
+    description: `Welcome to the official website repository for our Discord bot. This website serves as a hub of information, updates, and support for our Discord community.`,
     link: 'https://github.com/SrWitty/Discord-Bot-Website',
     image: image3,
   },
   {
     title: 'MasterShare',
-    description: 'Project Bot Share Discord is an advanced Discord bot designed to facilitate server sharing and enhance the member experience. It comes with a range of useful features and new runtime requirements.',
+    description: `Project Bot Share Discord is an advanced Discord bot designed to facilitate server sharing and enhance the member experience. It comes with a range of useful features and new runtime requirements.`,
     link: 'https://github.com/SrWitty/MasterShare',
     image: image4,
   },
@@ -126,7 +127,7 @@ const Work = () => {
               transition={{ duration: 0.3 }}
             >
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <ReactMarkdown>{project.description}</ReactMarkdown>
               <Arrow>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none">
                   <path d="M17 7L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
