@@ -18,7 +18,7 @@ function AppContent() {
       <GlobalStyle />
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" exact element={<Home />} index />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
