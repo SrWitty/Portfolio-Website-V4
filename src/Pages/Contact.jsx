@@ -230,7 +230,8 @@ const Contact = () => {
           
 We have received your message and will get back to you as soon as possible.
 
-Meanwhile, feel free to check out our [GitHub](https://github.com) or join us on [Discord](https://discord.com).`}
+Meanwhile, feel free to check out our [GitHub](https://github.com) or join us on [Discord](https://discord.com).
+##`}
         </ReactMarkdown>
       )}
       <DiscordLink href="https://discord.com/users/1091118468155314306" target="_blank">

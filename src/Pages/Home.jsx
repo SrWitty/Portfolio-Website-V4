@@ -89,7 +89,7 @@ const InfoTitle = styled.p`
 `;
 
 const markdownContent = `
-## Technologies used in this website:
+# Technologies used in this website:
 - **Styled-components 6.1.11:** Allows for CSS-in-JS styling, promoting reusable and maintainable styles.
 - **Swiper 11.1.4:** Adds touch-enabled sliders, improving mobile user experience.
 - **Tailwind-merge 2.3.0:** Combines Tailwind CSS classes for optimized styling.
@@ -104,6 +104,7 @@ const markdownContent = `
 - **Babel 7:** A JavaScript compiler that helps to write next-generation JavaScript.
 - **ESLint:** A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 - **Prettier:** An opinionated code formatter that supports many languages.
+##
 `;
 
 const Home = () => {

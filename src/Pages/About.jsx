@@ -328,7 +328,8 @@ const About = () => {
   });
 
   const markdownDescription = `
-  Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
+ # 
+ Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
 
   I live in Egypt and have been active in the world of web development since 2020. I started with HTML and CSS, then moved on to PHP, and gradually transitioned to JavaScript. Currently, I use JavaScript and TypeScript to create web applications and services.
 
@@ -338,7 +339,8 @@ const About = () => {
 
   So, buckle up, because I’m on a mission to sprinkle some magic on the web with every quirky and captivating application.
 
-  — Sir.Witty
+  — Sir.Witty 
+  ##
   `;
 
   return (
