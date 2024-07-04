@@ -8,12 +8,21 @@ const ProjectsContainer = styled.div`
   background-color: #070608;
   padding: 2rem 0;
   text-align: center;
+
+  @media (min-width: 1920px) {
+    padding: 4rem 0;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 3rem;
   color: #fff;
   margin-bottom: 2rem;
+
+  @media (min-width: 1920px) {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
 `;
 
 const ProjectsGrid = styled.div`
@@ -21,6 +30,10 @@ const ProjectsGrid = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+
+  @media (min-width: 1920px) {
+    gap: 2rem;
+  }
 `;
 
 const ProjectCard = styled.a`
@@ -28,7 +41,6 @@ const ProjectCard = styled.a`
   color: #fff;
   border-radius: 8px;
   padding: 1rem;
-  border-radius: 15px;
   width: 300px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -73,16 +85,29 @@ const ProjectCard = styled.a`
     position: relative;
     z-index: 1;
   }
+
+  @media (min-width: 1920px) {
+    width: 350px;
+    padding: 1.5rem;
+  }
 `;
 
 const ProjectTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+
+  @media (min-width: 1920px) {
+    font-size: 2rem;
+  }
 `;
 
 const TechStack = styled.p`
   font-size: 0.875rem;
   color: #b39ddb;
+
+  @media (min-width: 1920px) {
+    font-size: 1rem;
+  }
 `;
 
 const ViewProjectsButton = styled.a`
@@ -99,6 +124,12 @@ const ViewProjectsButton = styled.a`
 
   &:hover {
     background-color: #6a2bd9;
+  }
+
+  @media (min-width: 1920px) {
+    margin-top: 3rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
   }
 `;
 

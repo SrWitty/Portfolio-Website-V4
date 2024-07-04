@@ -12,14 +12,13 @@ const NavbarContainer = styled(motion.nav)`
   color: #fff;
   border-radius: 50px;
   position: fixed;
- top: 1rem;
+  top: 1rem;
   right: calc(32% - 10px); /* Adjusted right position */
   transform: translateX(55%); 
   max-width: calc(100% - 2rem);
   z-index: 1000;
   transition: padding 0.3s, font-size 0.3s;
   box-shadow: ${(props) => (props.scrolledDown ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none')};
-  border: 2px solid #fff;
   margin: 0 auto;
 
   @media (min-width: 768px) {
@@ -27,6 +26,13 @@ const NavbarContainer = styled(motion.nav)`
     transform: translateX(55%);
     width: 50%; /* Adjusted width for larger screens */
     max-width: 600px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: ${(props) => (props.scrolledDown ? '0.5rem 2rem' : '2rem 4rem')};
+    width: 70%;
+    max-width: 1200px;
+    top: 2rem;
   }
 `;
 
@@ -41,6 +47,10 @@ const Logo = styled.div`
 
   @media (max-width: 480px) {
     font-size: ${(props) => (props.scrolledDown ? '1rem' : '1.2rem')};
+  }
+
+  @media (min-width: 1920px) {
+    font-size: ${(props) => (props.scrolledDown ? '1.5rem' : '2rem')};
   }
 `;
 
@@ -62,6 +72,10 @@ const NavLinks = styled.ul`
     padding: 1rem;
     display: ${(props) => (props.isOpen ? 'flex' : 'none')};
   }
+
+  @media (min-width: 1920px) {
+    gap: 2rem;
+  }
 `;
 
 const NavLink = styled.li`
@@ -82,6 +96,11 @@ const NavLink = styled.li`
 
   @media (max-width: 768px) {
     margin: 1rem 0;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: ${(props) => (props.scrolledDown ? '1rem' : '1.2rem')};
+    margin-left: 3rem;
   }
 `;
 

@@ -11,22 +11,47 @@ const Container = styled.div`
   padding: 20px;
   background: #070608;
   color: #fff;
+
+  @media (min-width: 1920px) {
+    padding: 40px; // Increase padding for larger screens
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: left;
-  margin-top: 100px;  
-  margin-bottom: 50px;
+  margin-top: 50px;  
+  margin-bottom: 30px;
   color: #A476FE;
   font-weight: bold;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 4rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
 `;
 
 const Projects = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   justify-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+  }
 `;
 
 const Description = styled(motion.div)`
@@ -48,17 +73,26 @@ const Description = styled(motion.div)`
   h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
+
+    @media (min-width: 1920px) {
+      font-size: 2rem; // Increase font size for larger screens
+    }
   }
 
   p {
     margin-bottom: 20px;
     text-align: center;
+
+    @media (min-width: 1920px) {
+      font-size: 1.2rem; // Increase font size for larger screens
+    }
   }
 `;
 
 const Project = styled(motion.a)`
   position: relative;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   overflow: hidden;
   border-radius: 10px;
@@ -73,6 +107,18 @@ const Project = styled(motion.a)`
   &:hover ${Description} {
     opacity: 1;
   }
+
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 400px;
+  }
+
+  @media (min-width: 1920px) {
+    height: 400px; // Increase height for larger screens
+  }
 `;
 
 const Image = styled.img`
@@ -84,6 +130,10 @@ const Image = styled.img`
 const Arrow = styled.div`
   font-size: 2rem;
   color: #a369f7;
+
+  @media (min-width: 1920px) {
+    font-size: 2.5rem; // Increase font size for larger screens
+  }
 `;
 
 const projects = [

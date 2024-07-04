@@ -11,8 +11,20 @@ const ContactContainer = styled.div`
   text-align: center;
   color: #fff;
 
+  @media (max-width: 1920px) {
+    padding: 7rem 5rem;
+  }
+
+  @media (max-width: 1440px) {
+    padding: 6rem 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 5rem 3rem;
+  }
+
   @media (max-width: 768px) {
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
   }
 
   @media (max-width: 480px) {
@@ -25,12 +37,20 @@ const Title = styled.h2`
   margin-bottom: 2rem;
   color: #a855f7;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1440px) {
     font-size: 2.5rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
     font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
   }
 `;
 
@@ -41,8 +61,20 @@ const ContactForm = styled.form`
   max-width: 800px;
   margin: 0 auto;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1920px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: 1024px) {
     gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.5rem;
   }
 `;
 
@@ -63,6 +95,16 @@ const Input = styled.input`
 
   &:focus {
     background-color: #292929;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.75rem;
   }
 `;
 
@@ -87,6 +129,16 @@ const TextArea = styled.textarea`
   &:focus {
     background-color: #292929;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
 `;
 
 const SubmitButton = styled.button`
@@ -106,9 +158,14 @@ const SubmitButton = styled.button`
     background-color: #9333ea;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 `;
 
@@ -128,9 +185,14 @@ const DiscordLink = styled.a`
     background-color: #9333ea;
   }
 
-  @media (max-width: 480px) {
-    padding: 0.5rem 1.5rem;
+  @media (max-width: 768px) {
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 `;
 

@@ -44,12 +44,12 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
-  background-color: #070608;  
+  padding: 4rem 10%;
+  background-color: #070608;
   color: #ffffff;
 
   @media (max-width: 768px) {
-    padding: 6rem;
+    padding: 2rem 5%;
   }
 `;
 
@@ -59,6 +59,7 @@ const TopContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -78,20 +79,24 @@ const ImageContainer = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  width: 320px;
+  width: 20vw;
+  max-width: 320px;
   height: auto;
   border-radius: 10px;
   position: relative;
   z-index: 2;
 
   @media (max-width: 768px) {
-    width: 240px;
+    width: 60vw;
+    max-width: 240px;
   }
 `;
 
 const ImageBackground = styled.div`
-  width: 320px;
-  height: 500px;
+  width: 20vw;
+  max-width: 320px;
+  height: 30vw;
+  max-height: 500px;
   background-color: #7c3aed;
   position: absolute;
   top: 20px;
@@ -100,8 +105,10 @@ const ImageBackground = styled.div`
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    width: 240px;
-    height: 360px;
+    width: 60vw;
+    max-width: 240px;
+    height: 90vw;
+    max-height: 360px;
   }
 `;
 
@@ -114,7 +121,7 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 3vw;
   margin-top: 4rem;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -201,8 +208,10 @@ const StatCard = styled.div`
   border-radius: 10px;
   text-align: center;
   position: relative;
-  width: 200px;
-  height: 100px;
+  width: 12vw;
+  max-width: 200px;
+  height: 6vw;
+  max-height: 100px;
   z-index: 2;
 
   @media (max-width: 768px) {
@@ -211,8 +220,10 @@ const StatCard = styled.div`
 `;
 
 const StatDecoration = styled.div`
-  width: 200px;
-  height: 100px;
+  width: 12vw;
+  max-width: 200px;
+  height: 6vw;
+  max-height: 100px;
   background-color: #7c3aed;
   position: absolute;
   top: 20px;
@@ -232,7 +243,7 @@ const StatNumber = styled.h3`
 `;
 
 const StatText = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #888888;
   margin: 0;
 `;
@@ -240,7 +251,6 @@ const StatText = styled.p`
 const TechnologiesContainer = styled.div`
   margin-top: 4rem;
   text-align: center;
-
 
   @media (max-width: 768px) {
     margin-top: 2rem;
@@ -275,7 +285,7 @@ const Tab = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
     margin: 0 0.5rem;
   }
 `;
@@ -328,20 +338,21 @@ const About = () => {
   });
 
   const markdownDescription = `
- # 
- Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
 
+  Hello! I am your friendly web wizard who started dancing with JavaScript in the old days, self-taught.
+  
   I live in Egypt and have been active in the world of web development since 2020. I started with HTML and CSS, then moved on to PHP, and gradually transitioned to JavaScript. Currently, I use JavaScript and TypeScript to create web applications and services.
-
+  
   Recently, I have learned various forms of JavaScript and fallen in love with TypeScript. TypeScript addresses JavaScript’s shortcomings while allowing me to write safer and more readable code. For me, working with TypeScript is like a digital tango – every piece of code and design setting perfecting my projects and making them as functional as a Swiss army knife.
-
+  
   Guess what? I’ve been part of the Atlas Dev team for almost five years – that’s a lifetime in web years! From battling quirky bugs to celebrating pixel-perfect layouts, I’ve become more attached to my keyboard than to my morning coffee.
-
+  
   So, buckle up, because I’m on a mission to sprinkle some magic on the web with every quirky and captivating application.
-
-  — Sir.Witty 
-  ##
+  
+  — Sir.Witty
+  
   `;
+
 
   return (
     <AboutContainer>
@@ -368,21 +379,21 @@ const About = () => {
           <StatDecoration />
           <StatCard>
             <StatNumber>4 Years</StatNumber>
-            <StatText>Experience</StatText>
+            <StatText><b>Experience</b></StatText>
           </StatCard>
         </StatCardWrapper>
         <StatCardWrapper>
           <StatDecoration />
           <StatCard>
             <StatNumber>10+</StatNumber>
-            <StatText>Completed Projects</StatText>
+            <StatText><b>Completed Projects</b></StatText>
           </StatCard>
         </StatCardWrapper>
         <StatCardWrapper>
           <StatDecoration />
           <StatCard>
             <StatNumber>20+</StatNumber>
-            <StatText>Clients</StatText>
+            <StatText><b>Clients</b></StatText>
           </StatCard>
         </StatCardWrapper>
       </StatsContainer>

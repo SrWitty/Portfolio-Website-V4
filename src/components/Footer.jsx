@@ -19,6 +19,11 @@ const FooterContainer = styled.div`
     justify-content: space-between;
     padding: 1rem 2rem;
   }
+
+  @media (min-width: 1920px) {
+    padding: 2rem 4rem; // Increase padding for larger screens
+    font-size: 1.1rem; // Increase font size for larger screens
+  }
 `;
 
 const LeftText = styled.div`
@@ -30,11 +35,19 @@ const LeftText = styled.div`
     margin-bottom: 0;
     text-align: left;
   }
+
+  @media (min-width: 1920px) {
+    font-size: 1.1rem; // Increase font size for larger screens
+  }
 `;
 
 const SocialIcons = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (min-width: 1920px) {
+    gap: 1.5rem; // Increase gap for larger screens
+  }
 `;
 
 const SocialLink = styled.a`
@@ -48,6 +61,10 @@ const SocialLink = styled.a`
 
   // Remove any default underline or border styles
   text-decoration: none;
+
+  @media (min-width: 1920px) {
+    font-size: 1.5rem; // Increase icon size for larger screens
+  }
 `;
 
 const Footer = () => {
